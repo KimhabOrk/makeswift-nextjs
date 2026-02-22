@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import * as React from 'react';
-import { getSiteVersion } from '@makeswift/runtime/next/server';
-import { MakeswiftProvider } from '@/makeswift/provider';
+import { getSiteVersion } from "@makeswift/runtime/next/server"
+import { MakeswiftProvider } from "@/makeswift/provider";
 import '@/styles/globals.css';
 // !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
 import '@/styles/colors.css';
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   // ],
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
