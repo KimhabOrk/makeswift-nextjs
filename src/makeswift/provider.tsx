@@ -1,22 +1,22 @@
-"use client";
+'use client';
 
-import { runtime } from "@/makeswift/runtime";
-import { type SiteVersion } from "@makeswift/runtime/next";
+import { runtime } from '@/makeswift/runtime';
+import { type SiteVersion } from '@makeswift/runtime/next';
 import {
-	ReactRuntimeProvider,
-	RootStyleRegistry,
-} from "@makeswift/runtime/next";
+  ReactRuntimeProvider,
+  RootStyleRegistry,
+} from '@makeswift/runtime/next';
 
 export function MakeswiftProvider({
-	children,
-	siteVersion,
+  children,
+  siteVersion,
 }: {
-	children: React.ReactNode;
-	siteVersion: SiteVersion | null;
+  children: React.ReactNode;
+  siteVersion: SiteVersion | null;
 }) {
-	return (
-		<ReactRuntimeProvider siteVersion={siteVersion} runtime={runtime}>
+  return (
+    <ReactRuntimeProvider siteVersion={siteVersion} runtime={runtime}>
       <RootStyleRegistry>{children}</RootStyleRegistry>
     </ReactRuntimeProvider>
-	);
+  );
 }
